@@ -8,14 +8,17 @@
     <style>
         body {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-align: center;
+            display: flex;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
+            flex-direction: column;
         }
 
         header {
             font-size: 2em;
             background-color: #441752;
+            text-align: center;
             color: white;
             padding: 20px;
             opacity: 0;
@@ -143,7 +146,9 @@
 </head>
 
 <body>
-    <header>Welcome to Animated Web Page</header>
+    <header>
+        <h2>Welcome to Animated Web Page</h2>
+    </header>
     <div class="container">
         <img src="https://wallpapercave.com/wp/wp8006148.jpg" alt="Bouncing Image" class="bounce-img">
         <img src="https://wallpapercave.com/wp/wp5824791.jpg" alt="Rotate Me" class="rotate-img">
