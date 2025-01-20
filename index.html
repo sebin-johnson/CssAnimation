@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Web Page</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-size: 2em;
+            background-color: #441752;
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #2C2C2C;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .bounce-img {
+            width: 150px;
+            cursor: pointer;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .rotate-img {
+            width: 100px;
+            transition: transform 0.5s;
+        }
+
+        .rotate-img:hover {
+            transform: rotate(360deg);
+        }
+
+        .slide-box {
+            width: 80%;
+            max-width: 300px;
+            height: 100px;
+            background-image: url('https://wallpapercave.com/wp/wp6551998.jpg');
+            background-size: cover;
+            animation: slideIn 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        .pulse-card {
+            width: 80%;
+            max-width: 250px;
+            height: 150px;
+            background-image: url('https://wallpapercave.com/wp/wp8108637.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .fade-in-out {
+            width: 80%;
+            max-width: 250px;
+            height: 200px;
+            background-image: url('https://wallpapercave.com/wp/wp6640541.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            animation: fadeInOut 3s infinite alternate;
+        }
+
+        @keyframes fadeInOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Welcome to Animated Web Page</header>
+    <div class="container">
+        <img src="https://wallpapercave.com/wp/wp8006148.jpg" alt="Bouncing Image" class="bounce-img">
+        <img src="https://wallpapercave.com/wp/wp5824791.jpg" alt="Rotate Me" class="rotate-img">
+        <div class="slide-box"></div>
+        <div class="pulse-card"></div>
+        <div class="fade-in-out"></div>
+    </div>
+    <footer>© 2025 Animated Web Page. All Rights Reserved.</footer>
+</body>
+
+</html>
